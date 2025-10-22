@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Transaction, TransactionType, Card, Account, VisibleWidgets, RecurringTransaction } from '../types';
 import { TransactionList } from './TransactionList';

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Account } from '../types';
 import { Modal } from './common/Modal';

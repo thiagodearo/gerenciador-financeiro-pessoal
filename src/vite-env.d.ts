@@ -10,3 +10,6 @@ declare global {
     }
   }
 }
+
+// FIX: To address the "Augmentations for the global scope can only be directly nested in external modules..." error, we add an empty export to ensure this file is treated as a module.
+export {};

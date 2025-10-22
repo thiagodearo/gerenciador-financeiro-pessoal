@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { Transaction, TransactionType, Card, Installment, Account } from '../types';
 import { CATEGORIES } from '../constants';

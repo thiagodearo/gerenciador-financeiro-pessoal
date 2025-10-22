@@ -2,15 +2,12 @@ import React from 'react';
 
 type IconName = 'plus' | 'edit' | 'trash' | 'close' | 'credit-card' | 'dollar-sign' | 'trending-up' | 'trending-down' | 'upload' | 'download' | 'arrow-up-right' | 'arrow-down-right' | 'building-library' | 'wallet' | 'arrow-path' | 'cog-6-tooth' | 'google';
 
-// FIX: Add the `title` property to allow passing it to the underlying SVG for accessibility.
 interface IconProps {
   name: IconName;
   className?: string;
   title?: string;
 }
 
-// FIX: Replace `JSX.Element` with `React.ReactElement` to avoid referencing the `JSX` namespace which was not found.
-// FIX: By specifying the props type for the ReactElement, we allow TypeScript to correctly infer types for React.cloneElement.
 const ICONS: Record<IconName, React.ReactElement<React.SVGProps<SVGSVGElement>>> = {
   plus: (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -103,11 +100,8 @@ const ICONS: Record<IconName, React.ReactElement<React.SVGProps<SVGSVGElement>>>
   )
 };
 
-// FIX: The `title` attribute on SVG elements was causing a type error. A robust alternative for accessibility is to add a <title> element as a child.
 export const Icon: React.FC<IconProps> = ({ name, className = 'w-6 h-6', title }) => {
   const icon = ICONS[name];
-  // Using React.cloneElement is the idiomatic way to add/modify props of an element.
-  // New children replace existing children, so we must also pass the original children.
   return React.cloneElement(
     icon,
     { className },

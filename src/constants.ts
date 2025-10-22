@@ -1,4 +1,3 @@
-
 export const CATEGORIES = [
   'Alimentação',
   'Transporte',

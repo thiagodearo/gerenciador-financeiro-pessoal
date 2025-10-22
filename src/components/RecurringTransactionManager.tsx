@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// FIX: Import CATEGORIES from '../constants' instead of '../types'
 import { RecurringTransaction, Card, Account } from '../types';
 import { CATEGORIES } from '../constants';
 import { Modal } from './common/Modal';
