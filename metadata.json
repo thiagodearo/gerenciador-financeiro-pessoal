@@ -1,0 +1,5 @@
+{
+  "name": "Gerenciador Financeiro Inteligente",
+  "description": "Um aplicativo de gerenciamento financeiro para rastrear despesas, receitas e cartões de crédito. Ele usa a API Gemini para categorizar transações de forma inteligente.",
+  "requestFramePermissions": []
+}
